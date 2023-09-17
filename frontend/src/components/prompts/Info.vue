@@ -10,13 +10,33 @@
       </p>
 
       <p class="break-word" v-if="selected.length < 2">
-        <strong>{{ $t("prompts.displayName") }}</strong> {{ name }}
+        Данный инструмент предназначен для централизации отчетности по ЛПХ 
+          и крестьянским хозяйствам. 
       </p>
-      <p v-if="!dir || selected.length > 1">
-        <strong>{{ $t("prompts.size") }}:</strong>
-        <span id="content_length"></span> {{ humanSize }}
-      </p>
-      <p v-if="selected.length < 2" :title="modTime">
+
+      <span  v-if="selected.length < 2">
+        На главной странице загружен excel шаблон, который необходимо скачать и заполнить. 
+      </span>
+
+      <span  v-if="selected.length < 2">
+        В некоторых ячейках есть возможность выбрать ответ из перечня.
+      </span>
+
+      <span  v-if="selected.length < 2">
+        В файле есть несколько вкладок, которые необходимо заполнить не меняя структуру и
+        наименование полей.
+      </span>
+
+      <span  v-if="selected.length < 2">
+        После заполнения файла его необходимо загрузить с помощью иконки “загрузить”. 
+      </span>
+
+      <span  v-if="selected.length < 2">
+        После загрузки файл отобразится на главной странице.
+      </span>
+
+
+      <!-- <p v-if="selected.length < 2" :title="modTime">
         <strong>{{ $t("prompts.lastModified") }}:</strong> {{ humanTime }}
       </p>
 
@@ -53,8 +73,8 @@
               $t("prompts.show")
             }}</a></code
           >
-        </p>
-        <p>
+        </p> -->
+        <!-- <p>
           <strong>SHA512: </strong
           ><code
             ><a @click="checksum($event, 'sha512')">{{
@@ -62,7 +82,7 @@
             }}</a></code
           >
         </p>
-      </template>
+      </template> -->
     </div>
 
     <div class="card-action">

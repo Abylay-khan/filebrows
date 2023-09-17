@@ -447,6 +447,12 @@ body.rtl .card-content .small + input {
   text-align: left;
 }
 
+.card.floating {
+  width: 100% !important;
+  max-width: 35em;
+  text-align: start;
+}
+
 body.rtl .card.floating .card-content .file-list {
   direction: ltr;
   text-align: left;
